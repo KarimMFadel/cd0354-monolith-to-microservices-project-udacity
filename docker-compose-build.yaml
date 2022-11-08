@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
-    image: karimmfadel/reverseproxy:v1
+    image: karimmfadel/reverseproxy:v2
   backend_user:
     build:
       context: ./udagram-api-user
-    image: karimmfadel/udagram-api-user:v1
+    image: karimmfadel/udagram-api-user:v2
   backend_feed:
     build:
       context: ./udagram-api-feed
-    image: karimmfadel/udagram-api-feed:v1
+    image: karimmfadel/udagram-api-feed:v2
   frontend:
     build:
       context: ./udagram-frontend
-    image: karimmfadel/udagram-frontend:v1
+    image: karimmfadel/udagram-frontend:v2
