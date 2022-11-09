@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: reverseproxy
-          image: karimmfadel/udagram-reverseproxy
-          imagePullPolicy: Always
+          image: karimmfadel/reverseproxy:v2
           resources:
             requests:
               memory: "64Mi"

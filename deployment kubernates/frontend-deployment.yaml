@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: frontend
   labels:
-    service: frontend
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: frontend
+      app: frontend
   template:
     metadata:
       labels:
-        service: frontend
+        app: frontend
     spec:
       containers:
       - name: frontend

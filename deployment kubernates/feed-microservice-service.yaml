@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: feed-microservice
+  name: backend-feed
   labels:
-    service: feed-microservice
+    app: backend-feed
 spec:
   ports:
     - name: "8080"
       port: 8080
       targetPort: 8080
   selector:
-    service: feed-microservice
+    app: backend-feed

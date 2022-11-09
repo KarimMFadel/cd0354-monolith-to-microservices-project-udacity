@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: feed-microservice
+  name: backend-feed
   labels:
-    service: feed-microservice
+    app: backend-feed
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      service: feed-microservice
+      app: backend-feed
   template:
     metadata:
       labels:
-        service: feed-microservice
+        app: backend-feed
     spec:
       containers:
-      - name: feed-microservice
+      - name: backend-feed
         image: karimmfadel/udagram-api-feed:v2
         env:
         - name: POSTGRES_DB

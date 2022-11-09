@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-microservice
+  name: backend-user
   labels:
-    service: user-microservice
+    app: backend-user
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      service: user-microservice
+      app: backend-user
   template:
     metadata:
       labels:
-        service: user-microservice
+        app: backend-user
     spec:
       containers:
-      - name: user-microservice
+      - name: backend-user
         image: karimmfadel/udagram-api-user:v2
         env:
         - name: POSTGRES_DB
